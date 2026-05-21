@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.transition = "all 0.3s ease";
         });
         card.addEventListener("mouseleave", () => {
-            card.style.background = "rgba(15, 23, 42, 0.4)";
+            card.style.background = "rgba(15, 23, 42, 0.5)";
             card.style.borderColor = "rgba(255, 255, 255, 0.03)";
             card.style.transform = "translateX(0)";
         });
