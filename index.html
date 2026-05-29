@@ -1,339 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eduardo Luz | Full Stack Developer</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Luz | Full Stack Developer</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <div class="background-overlay"></div>
 
-<body>
+        <main class="portfolio-container">
+            <div class="glow-bg-1"></div>
+            <div class="glow-bg-2"></div>
 
-    <div class="background-overlay"></div>
-
-    <main class="portfolio-container">
-        <div class="glow-bg-1"></div>
-        <div class="glow-bg-2"></div>
-
-        <div class="main-card">
-
-            <div class="side-icons-left">
-                <div class="icon-circle01"><i class="fa-solid fa-code fa-2xl"></i></div>
-                <div class="icon-circle02"><i class="fa-solid fa-code-commit fa-2xl"></i></div>
-                <div class="icon-circle01"><i class="fa-solid fa-terminal fa-2xl"></i></div>
-                <div class="icon-circle02"><i class="fa-solid fa-database fa-2xl"></i></div>
-            </div>
-
-            <div class="card-content">
-                <div class="profile-header">
-                    <div class="photo-container">
-                        <img src="imagens/eduardo-perfil.png" alt="Eduardo Luz" class="profile-avatar"
-                            onerror="this.src='https://via.placeholder.com/200x200/0b111e/38bdf8?text=Eduardo+Luz'">
+            <div class="main-card">
+                <div class="side-icons-left">
+                    <div class="icon-circle01">
+                        <i class="fa-solid fa-code fa-2xl"></i>
                     </div>
+                    <div class="icon-circle02">
+                        <i class="fa-solid fa-code-commit fa-2xl"></i>
+                    </div>
+                    <div class="icon-circle01">
+                        <i class="fa-solid fa-terminal fa-2xl"></i>
+                    </div>
+                    <div class="icon-circle02">
+                        <i class="fa-solid fa-database fa-2xl"></i>
+                    </div>
+                </div>
 
-                    <div class="profile-info">
-                        <div class="badge-dev">
-                            <i class="fa-solid fa-code"></i> DESENVOLVEDOR <span class="cyan-text">FULL STACK</span>
+                <div class="card-content">
+                    <div class="profile-header">
+                        <div class="photo-container">
+                            <img
+                                src="imagens/eduardo-perfil.png"
+                                alt="Eduardo Luz"
+                                class="profile-avatar"
+                                onerror="
+                                    this.src =
+                                        'https://via.placeholder.com/200x200/0b111e/38bdf8?text=Eduardo+Luz'
+                                "
+                            />
                         </div>
-                        <h1 class="main-name">EDUARDO <span class="blue-light-text">LUZ</span></h1>
-                        <p class="slogan">
-                            <i class="fa-solid fa-rocket animate-rocket"></i> TRANSFORMANDO IDEIAS EM <span
-                                class="cyan-text">SOLUÇÕES DIGITAIS</span>
-                        </p>
 
-                        <div class="tech-grid">
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"
-                                rel="noopener noreferrer" class="tech-item" style="--tech-color: #e34c26;"
-                                data-tooltip="Linguagem de marcação que estrutura páginas web.">
-                                <i class="fa-brands fa-html5"></i><span>HTML5</span>
-                            </a>
+                        <div class="profile-info">
+                            <div class="badge-dev">
+                                <i class="fa-solid fa-code"></i> DESENVOLVEDOR
+                                <span class="cyan-text">FULL STACK</span>
+                            </div>
+                            <h1 class="main-name">
+                                EDUARDO <span class="blue-light-text">LUZ</span>
+                            </h1>
+                            <p class="slogan">
+                                <i
+                                    class="fa-solid fa-rocket animate-rocket"
+                                ></i>
+                                TRANSFORMANDO IDEIAS EM
+                                <span class="cyan-text">SOLUÇÕES DIGITAIS</span>
+                            </p>
 
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank"
-                                rel="noopener noreferrer" class="tech-item" style="--tech-color: #264de4;"
-                                data-tooltip="Responsável pelo estilo e layout das páginas.">
-                                <i class="fa-brands fa-css3-alt"></i><span>CSS3</span>
-                            </a>
+                            <div class="tech-grid">
+                                <a
+                                    href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #e34c26"
+                                    data-tooltip="Linguagem de marcação que estrutura páginas web."
+                                >
+                                    <i class="fa-brands fa-html5"></i
+                                    ><span>HTML5</span>
+                                </a>
 
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"
-                                rel="noopener noreferrer" class="tech-item" style="--tech-color: #f0db4f;"
-                                data-tooltip="Linguagem que adiciona interatividade ao site.">
-                                <i class="fa-brands fa-js"></i><span>JavaScript</span>
-                            </a>
+                                <a
+                                    href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #264de4"
+                                    data-tooltip="Responsável pelo estilo e layout das páginas."
+                                >
+                                    <i class="fa-brands fa-css3-alt"></i
+                                    ><span>CSS3</span>
+                                </a>
 
-                            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="tech-item"
-                                style="--tech-color: #61dbfb;"
-                                data-tooltip="Biblioteca para criar interfaces modernas e dinâmicas.">
-                                <i class="fa-brands fa-react"></i><span>React</span>
-                            </a>
+                                <a
+                                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #f0db4f"
+                                    data-tooltip="Linguagem que adiciona interatividade ao site."
+                                >
+                                    <i class="fa-brands fa-js"></i
+                                    ><span>JavaScript</span>
+                                </a>
 
-                            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="tech-item"
-                                style="--tech-color: #68a063;" data-tooltip="Executa JavaScript no backend (servidor).">
-                                <i class="fa-brands fa-node-js"></i><span>Node.js</span>
-                            </a>
+                                <a
+                                    href="https://react.dev/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #61dbfb"
+                                    data-tooltip="Biblioteca para criar interfaces modernas e dinâmicas."
+                                >
+                                    <i class="fa-brands fa-react"></i
+                                    ><span>React</span>
+                                </a>
 
-                            <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer" class="tech-item"
-                                style="--tech-color: #f89820;"
-                                data-tooltip="Linguagem robusta usada em sistemas corporativos.">
-                                <i class="fa-brands fa-java"></i><span>Java</span>
-                            </a>
+                                <a
+                                    href="https://nodejs.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #68a063"
+                                    data-tooltip="Executa JavaScript no backend (servidor)."
+                                >
+                                    <i class="fa-brands fa-node-js"></i
+                                    ><span>Node.js</span>
+                                </a>
 
-                            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"
-                                class="tech-item" style="--tech-color: #3776ab;"
-                                data-tooltip="Versátil, usada em automação, IA e backend.">
-                                <i class="fa-brands fa-python"></i><span>Python</span>
-                            </a>
+                                <a
+                                    href="https://www.java.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #f89820"
+                                    data-tooltip="Linguagem robusta usada em sistemas corporativos."
+                                >
+                                    <i class="fa-brands fa-java"></i
+                                    ><span>Java</span>
+                                </a>
 
-                            <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="tech-item"
-                                style="--tech-color: #00758f;"
-                                data-tooltip="Banco de dados relacional muito usado no mercado.">
-                                <i class="fa-solid fa-database"></i><span>MySQL</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                <a
+                                    href="https://www.python.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #3776ab"
+                                    data-tooltip="Versátil, usada em automação, IA e backend."
+                                >
+                                    <i class="fa-brands fa-python"></i
+                                    ><span>Python</span>
+                                </a>
 
-                <div class="contact-bar">
-                    <div class="contact-item01">
-                        <a href="https://maps.app.goo.gl/B5WsqXvhuiCMaC9M6" target="_blank">
-                            <i class="fa-solid fa-location-dot"></i> <span>Recife, PE - Brasil</span>
-                        </a>
-                    </div>
-                    <div class="contact-item02">
-                        <a href="mailto:eduardodudu006@gmail.com" class="contact-item clickable">
-                            <i class="fa-solid fa-envelope"></i> <span>eduardodudu006@gmail.com</span>
-                        </a>
-                    </div>
-                    <div class="contact-item03">
-                        <a href="https://github.com/EduardoDudu006" target="_blank" class="contact-item clickable">
-                            <i class="fa-brands fa-github"></i> <span>/EduardoDudu006</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="side-cards-right">
-                <div class="soft-card" style="--border-color: #38bdf8;">
-                    <div class="soft-icon cyan-text"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="soft-text">
-                        <h5>FOCADO EM</h5>
-                        <h4>SOLUÇÕES REAIS</h4>
-                    </div>
-                </div>
-                <div class="soft-card" style="--border-color: #c084fc;">
-                    <div class="soft-icon pink-text"><i class="fa-solid fa-bullseye"></i></div>
-                    <div class="soft-text">
-                        <h5>APAIXONADO POR</h5>
-                        <h4>TECNOLOGIA</h4>
-                    </div>
-                </div>
-                <div class="soft-card" style="--border-color: #fbbf24;">
-                    <div class="soft-icon yellow-text"><i class="fa-solid fa-brain"></i></div>
-                    <div class="soft-text">
-                        <h5>MENTE ANALÍTICA</h5>
-                        <h4>E ESTRATÉGICA</h4>
-                    </div>
-                </div>
-                <div class="soft-card" style="--border-color: #34d399;">
-                    <div class="soft-icon green-text"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="soft-text">
-                        <h5>DISCIPLINA, FOCO</h5>
-                        <h4>E CONSISTÊNCIA</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-cards-grid">
-            <a href="#" class="footer-card" data-target="visao">
-                <div class="footer-card-icon blue-text"><i class="fa-solid fa-chart-line fa-2xl"></i></div>
-                <div class="footer-card-info">
-                    <h3>VISÃO DE NEGÓCIO</h3>
-                    <p>Formação em Administração</p>
-                </div>
-            </a>
-
-            <a href="#" class="footer-card" data-target="experiencia">
-                <div class="footer-card-icon blue-text"><i class="fa-solid fa-shield-halved fa-2xl"></i></div>
-                <div class="footer-card-info">
-                    <h3>EXPERIÊNCIA REAL</h3>
-                    <p>Segurança Privada</p>
-                </div>
-            </a>
-
-            <a href="#" class="footer-card unique-border" data-target="transicao">
-                <div class="footer-card-icon purple-text"><i class="fa-solid fa-code-compare fa-2xl"></i></div>
-                <div class="footer-card-info">
-                    <h3>TRANSIÇÃO COM PROPÓSITO</h3>
-                    <p>Da Segurança para a Tecnologia</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="modal-overlay" id="infoModal">
-            <div class="modal-content card-vidro-dark">
-                <button class="modal-close">&times;</button>
-                <div class="modal-icon" id="modalIcon"></div>
-                <h2 id="modalTitle">Título da Janela</h2>
-                <p id="modalText">Texto explicativo aqui...</p>
-            </div>
-        </div>
-
-        <footer class="lower-connect-card">
-            <div class="inner-quote-top">
-
-                <i class="fa-solid fa-code icon-quote icon-left"></i>
-
-                <p>
-                    CÓDIGO É <span class="cyan-text">LÓGICA</span>, MAS PROPÓSITO É
-                    <span class="purple-light-text">TRANSFORMAÇÃO</span>
-                </p>
-
-                <i class="fa-solid fa-code icon-quote icon-right"></i>
-
-            </div>
-
-            <div class="connect-grid-layout">
-                <div class="copyright-block">
-                    <div class="shield-badge-container">
-                        <div class="shield-glow"></div>
-                        <i class="fa-solid fa-shield main-shield-icon"></i>
-                        <span class="copyright-symbol">©</span>
-                    </div>
-                    <div class="copyright-text">
-                        <h2><span class="cyan-text">© 2026</span> EDUARDO LUZ</h2>
-                        <p>TODOS OS DIREITOS RESERVADOS</p>
-                    </div>
-                </div>
-
-                <div class="social-links-panel">
-                    <div class="panel-header-badge02">
-                        <div class="circle-neon-link user-neon02">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
-                        <span>VAMOS NOS CONECTAR</span>
-                    </div>
-
-                    <div class="social-circles-row">
-                        <a href="https://linkedin.com/in/eduardo-luz-006br" target="_blank" class="social-column">
-                            <div class="circle-neon-link linkedin-neon"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <span class="social-title">LINKEDIN</span>
-                            <span class="social-user">/eduardo-luz-006br</span>
-                        </a>
-
-                        <span class="social-divider"></span>
-
-                        <a href="https://wa.me/5581988761613" target="_blank" class="social-column">
-                            <div class="circle-neon-link whatsapp-neon"><i class="fa-brands fa-whatsapp"></i></div>
-                            <span class="social-title">WHATSAPP</span>
-                            <span class="social-user">(81) 98876-1613</span>
-                        </a>
-
-                        <span class="social-divider"></span>
-
-                        <a href="mailto:eduardodudu006@gmail.com" class="social-column">
-                            <div class="circle-neon-link email-neon"><i class="fa-regular fa-envelope"></i></div>
-                            <span class="social-title">E-MAIL</span>
-                            <span class="social-user text-lowercase">eduardodudu006<br>@gmail.com</span>
-                        </a>
-
-                        <span class="social-divider"></span>
-
-                        <a href="https://youtube.com/@006eduardodudu" target="_blank" class="social-column">
-                            <div class="circle-neon-link youtube-neon"><i class="fa-brands fa-youtube"></i></div>
-                            <span class="social-title">YOUTUBE</span>
-                            <span class="social-user">@006eduardodudu</span>
-                        </a>
-
-                        <span class="social-divider"></span>
-
-                        <a href="https://github.com/EduardoDudu006" target="_blank" class="social-column">
-                            <div class="circle-neon-link github-neon"><i class="fa-brands fa-github"></i></div>
-                            <span class="social-title">GITHUB</span>
-                            <span class="social-user">/EduardoDudu006</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="metrics-panel">
-                    <div class="metric-sub-card">
-                        <div class="metric-header-info">
-                            <i class="fa-solid fa-star yellow-text font-lg"></i>
-                            <div class="metric-titles">
-                                <h5>TOTAL DE ESTRELAS</h5>
-                                <h4>129+</h4>
+                                <a
+                                    href="https://www.mysql.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tech-item"
+                                    style="--tech-color: #00758f"
+                                    data-tooltip="Banco de dados relacional muito usado no mercado."
+                                >
+                                    <i class="fa-solid fa-database"></i
+                                    ><span>MySQL</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="mini-chart">
-                            <svg viewBox="0 0 100 30" class="chart-svg">
-                                <path d="M5,25 L35,22 L65,15 L95,5" fill="none" stroke="#fbbf24" stroke-width="2" />
-                                <circle cx="5" cy="25" r="2" fill="#fbbf24" />
-                                <circle cx="35" cy="22" r="2" fill="#fbbf24" />
-                                <circle cx="65" cy="15" r="2" fill="#fbbf24" />
-                                <circle cx="95" cy="5" r="3" fill="#ffffff" class="pulse-dot" />
-                            </svg>
-                        </div>
                     </div>
 
-
-
-
-
-
-
-
-                    <div class="metric-sub-card">
-                        <div class="metric-header-info">
-                            <i class="fa-solid fa-users cyan-text font-lg"></i>
-                            <div class="metric-titles">
-                                <h5>SEGUIDORES</h5>
-                                <h4>75+</h4>
-                            </div>
+                    <div class="contact-bar">
+                        <div class="contact-item01">
+                            <a
+                                href="https://maps.app.goo.gl/B5WsqXvhuiCMaC9M6"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Recife, PE - Brasil</span>
+                            </a>
                         </div>
-                        <div class="mini-chart">
-                            <svg viewBox="0 0 100 30" class="chart-svg">
-                                <path d="M5,25 L40,18 L70,22 L95,8" fill="none" stroke="#06b6d4" stroke-width="2" />
-                                <circle cx="5" cy="25" r="2" fill="#06b6d4" />
-                                <circle cx="40" cy="18" r="2" fill="#06b6d4" />
-                                <circle cx="70" cy="22" r="2" fill="#06b6d4" />
-                                <circle cx="95" cy="8" r="3" fill="#ffffff" class="pulse-dot" />
-                            </svg>
+                        <div class="contact-item02">
+                            <a
+                                href="mailto:eduardodudu006@gmail.com"
+                                class="contact-item clickable"
+                            >
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>eduardodudu006@gmail.com</span>
+                            </a>
+                        </div>
+                        <div class="contact-item03">
+                            <a
+                                href="https://github.com/EduardoDudu006"
+                                target="_blank"
+                                class="contact-item clickable"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                                <span>/EduardoDudu006</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-cards-right">
+                    <div class="soft-card" style="--border-color: #38bdf8">
+                        <div class="soft-icon cyan-text">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="soft-text">
+                            <h5>FOCADO EM</h5>
+                            <h4>SOLUÇÕES REAIS</h4>
+                        </div>
+                    </div>
+                    <div class="soft-card" style="--border-color: #c084fc">
+                        <div class="soft-icon pink-text">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div class="soft-text">
+                            <h5>APAIXONADO POR</h5>
+                            <h4>TECNOLOGIA</h4>
+                        </div>
+                    </div>
+                    <div class="soft-card" style="--border-color: #fbbf24">
+                        <div class="soft-icon yellow-text">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="soft-text">
+                            <h5>MENTE ANALÍTICA</h5>
+                            <h4>E ESTRATÉGICA</h4>
+                        </div>
+                    </div>
+                    <div class="soft-card" style="--border-color: #34d399">
+                        <div class="soft-icon green-text">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div class="soft-text">
+                            <h5>DISCIPLINA, FOCO</h5>
+                            <h4>E CONSISTÊNCIA</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="footer-cards-grid">
+                <a href="#" class="footer-card" data-target="visao">
+                    <div class="footer-card-icon blue-text">
+                        <i class="fa-solid fa-chart-line fa-2xl"></i>
+                    </div>
+                    <div class="footer-card-info">
+                        <h3>VISÃO DE NEGÓCIO</h3>
+                        <p>Formação em Administração</p>
+                    </div>
+                </a>
 
+                <a href="#" class="footer-card" data-target="experiencia">
+                    <div class="footer-card-icon blue-text">
+                        <i class="fa-solid fa-shield-halved fa-2xl"></i>
+                    </div>
+                    <div class="footer-card-info">
+                        <h3>EXPERIÊNCIA REAL</h3>
+                        <p>Segurança Privada</p>
+                    </div>
+                </a>
 
-
-
-
-
-
-            <div class="inner-quote-bottom">
-                <div class="terminal-badge"><i class="fa-solid fa-code text-muted fa-2xl"></i></div>
-                <p><span class="cyan-text">CÓDIGO LIMPO</span> RESOLVE PROBLEMAS. <span class="purple-light-text">CÓDIGO
-                        INTELIGENTE</span> EVITA QUE ELES VOLTEM.</p>
-                <i class="fa-solid fa-paper-plane rocket-footer-icon"></i>
+                <a
+                    href="#"
+                    class="footer-card unique-border"
+                    data-target="transicao"
+                >
+                    <div class="footer-card-icon purple-text">
+                        <i class="fa-solid fa-code-compare fa-2xl"></i>
+                    </div>
+                    <div class="footer-card-info">
+                        <h3>TRANSIÇÃO COM PROPÓSITO</h3>
+                        <p>Da Segurança para a Tecnologia</p>
+                    </div>
+                </a>
             </div>
-        </footer>
-    </main>
 
+            <div class="modal-overlay" id="infoModal">
+                <div class="modal-content card-vidro-dark">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-icon" id="modalIcon"></div>
+                    <h2 id="modalTitle">Título da Janela</h2>
+                    <p id="modalText">Texto explicativo aqui...</p>
+                </div>
+            </div>
 
+            <footer class="lower-connect-card">
+                <div class="inner-quote-top">
+                    <i class="fa-solid fa-code icon-quote icon-left"></i>
 
+                    <p>
+                        CÓDIGO É <span class="cyan-text">LÓGICA</span>, MAS
+                        PROPÓSITO É
+                        <span class="purple-light-text">TRANSFORMAÇÃO</span>
+                    </p>
 
+                    <i class="fa-solid fa-code icon-quote icon-right"></i>
+                </div>
 
+                <div class="connect-grid-layout">
+                    <div class="copyright-block">
+                        <div class="shield-badge-container">
+                            <div class="shield-glow"></div>
+                            <i class="fa-solid fa-shield main-shield-icon"></i>
+                            <span class="copyright-symbol">©</span>
+                        </div>
+                        <div class="copyright-text">
+                            <h2>
+                                <span class="cyan-text">© 2026</span> EDUARDO
+                                LUZ
+                            </h2>
+                            <p>TODOS OS DIREITOS RESERVADOS</p>
+                        </div>
+                    </div>
 
+                    <div class="social-links-panel">
+                        <div class="panel-header-badge02">
+                            <div class="circle-neon-link user-neon02">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <span>VAMOS NOS CONECTAR</span>
+                        </div>
 
+                        <div class="social-circles-row">
+                            <a
+                                href="https://linkedin.com/in/eduardo-luz-006br"
+                                target="_blank"
+                                class="social-column"
+                            >
+                                <div class="circle-neon-link linkedin-neon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <span class="social-title">LINKEDIN</span>
+                                <span class="social-user"
+                                    >/eduardo-luz-006br</span
+                                >
+                            </a>
 
-    <script src="script.js"></script>
-</body>
+                            <span class="social-divider"></span>
 
+                            <a
+                                href="https://wa.me/5581988761613"
+                                target="_blank"
+                                class="social-column"
+                            >
+                                <div class="circle-neon-link whatsapp-neon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <span class="social-title">WHATSAPP</span>
+                                <span class="social-user">(81) 98876-1613</span>
+                            </a>
 
+                            <span class="social-divider"></span>
 
+                            <a
+                                href="mailto:eduardodudu006@gmail.com"
+                                class="social-column"
+                            >
+                                <div class="circle-neon-link email-neon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <span class="social-title">E-MAIL</span>
+                                <span class="social-user text-lowercase"
+                                    >eduardodudu006<br />@gmail.com</span
+                                >
+                            </a>
 
+                            <span class="social-divider"></span>
+
+                            <a
+                                href="https://youtube.com/@006eduardodudu"
+                                target="_blank"
+                                class="social-column"
+                            >
+                                <div class="circle-neon-link youtube-neon">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                                <span class="social-title">YOUTUBE</span>
+                                <span class="social-user">@006eduardodudu</span>
+                            </a>
+
+                            <span class="social-divider"></span>
+
+                            <a
+                                href="https://github.com/EduardoDudu006"
+                                target="_blank"
+                                class="social-column"
+                            >
+                                <div class="circle-neon-link github-neon">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <span class="social-title">GITHUB</span>
+                                <span class="social-user">/EduardoDudu006</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="metrics-panel">
+                        <div class="metric-sub-card">
+                            <div class="metric-header-info">
+                                <i
+                                    class="fa-solid fa-star yellow-text font-lg"
+                                ></i>
+                                <div class="metric-titles">
+                                    <h5>TOTAL DE ESTRELAS</h5>
+                                    <h4>129+</h4>
+                                </div>
+                            </div>
+                            <div class="mini-chart">
+                                <svg viewBox="0 0 100 30" class="chart-svg">
+                                    <path
+                                        d="M5,25 L35,22 L65,15 L95,5"
+                                        fill="none"
+                                        stroke="#fbbf24"
+                                        stroke-width="2"
+                                    />
+                                    <circle
+                                        cx="5"
+                                        cy="25"
+                                        r="2"
+                                        fill="#fbbf24"
+                                    />
+                                    <circle
+                                        cx="35"
+                                        cy="22"
+                                        r="2"
+                                        fill="#fbbf24"
+                                    />
+                                    <circle
+                                        cx="65"
+                                        cy="15"
+                                        r="2"
+                                        fill="#fbbf24"
+                                    />
+                                    <circle
+                                        cx="95"
+                                        cy="5"
+                                        r="3"
+                                        fill="#ffffff"
+                                        class="pulse-dot"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="metric-sub-card">
+                            <div class="metric-header-info">
+                                <i
+                                    class="fa-solid fa-users cyan-text font-lg"
+                                ></i>
+                                <div class="metric-titles">
+                                    <h5>SEGUIDORES</h5>
+                                    <h4>75+</h4>
+                                </div>
+                            </div>
+                            <div class="mini-chart">
+                                <svg viewBox="0 0 100 30" class="chart-svg">
+                                    <path
+                                        d="M5,25 L40,18 L70,22 L95,8"
+                                        fill="none"
+                                        stroke="#06b6d4"
+                                        stroke-width="2"
+                                    />
+                                    <circle
+                                        cx="5"
+                                        cy="25"
+                                        r="2"
+                                        fill="#06b6d4"
+                                    />
+                                    <circle
+                                        cx="40"
+                                        cy="18"
+                                        r="2"
+                                        fill="#06b6d4"
+                                    />
+                                    <circle
+                                        cx="70"
+                                        cy="22"
+                                        r="2"
+                                        fill="#06b6d4"
+                                    />
+                                    <circle
+                                        cx="95"
+                                        cy="8"
+                                        r="3"
+                                        fill="#ffffff"
+                                        class="pulse-dot"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-quote-bottom">
+                    <div class="terminal-badge">
+                        <i class="fa-solid fa-code text-muted fa-2xl"></i>
+                    </div>
+                    <p>
+                        <span class="cyan-text">CÓDIGO LIMPO</span> RESOLVE
+                        PROBLEMAS.
+                        <span class="purple-light-text"
+                            >CÓDIGO INTELIGENTE</span
+                        >
+                        EVITA QUE ELES VOLTEM.
+                    </p>
+                    <i class="fa-solid fa-paper-plane rocket-footer-icon"></i>
+                </div>
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
 </html>

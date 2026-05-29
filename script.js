@@ -41,4 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.transform = "translateX(0)";
         });
     });
+
+    // 5. Simulação de Carregamento (Preloader) - CORRIGIDO
+    const preloader = document.querySelector(".preloader");
+    if (preloader) {
+        let progress = 0;
+        const progressText = document.querySelector(".progress-text");
+
+        // Usamos setInterval para executar o código repetidamente a cada 30ms
+        const interval = setInterval(() => {
+            progress++;
+            if (progressText) {
+                progressText.innerText = `${progress}%`;
+            }
+
+            // Quando chegar a 100%, limpa o intervalo e esconde o preloader
+            if (progress >= 100) {
+                clearInterval(interval);
+
+                preloader.style.transition = "opacity 0.5s ease";
+                preloader.style.opacity = "0";
+
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 500);
+            }
+        }, 30); // Controla a velocidade do carregamento (30ms por número)
+    }
 });
