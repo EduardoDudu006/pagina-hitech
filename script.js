@@ -68,4 +68,71 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 30); // Controla a velocidade do carregamento (30ms por número)
     }
+    // Objeto contendo os textos personalizados e estilizados para o Modal
+    const modalData = {
+        visao: {
+            title: "Visão de Negócio",
+            text: "Aplicação direta de conceitos estratégicos e analíticos da Administração no desenvolvimento de software. Foco total em arquiteturas eficientes, mapeamento de processos limpos e entrega de real valor comercial ao usuário.",
+        },
+        experiencia: {
+            title: "Experiência Real",
+            text: "Anos de atuação no setor de Segurança Privada lapidaram competências indispensáveis na tecnologia: gerenciamento ágil de crises, atenção obsessiva a detalhes, mitigação rigorosa de riscos e resiliência extrema sob pressão.",
+        },
+        transicao: {
+            title: "Transição com Propósito",
+            text: "A mudança da segurança patrimonial para a engenharia de software foi um movimento calculado. União perfeita da disciplina operacional e proteção de ativos físicos com a construção de sistemas blindados, escaláveis e modernos.",
+        },
+    };
+
+    // Seleção de elementos do DOM
+    const cards = document.querySelectorAll(".center-card");
+    const modal = document.getElementById("infoModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const modalIcon = document.getElementById("modalIcon");
+    const closeBtn = document.querySelector(".modal-close");
+
+    // Função para abrir o modal com conteúdo correto
+    cards.forEach((card) => {
+        card.addEventListener("click", (e) => {
+            e.preventDefault(); // Evita que a página pule devido ao href="#"
+
+            const target = card.getAttribute("data-target");
+            const data = modalData[target];
+
+            if (data) {
+                // Injeta o título e texto correspondentes
+                modalTitle.innerText = data.title;
+                modalText.innerText = data.text;
+
+                // Copia o ícone do card atual (com as cores originais) para dentro do modal
+                const iconClone =
+                    card.querySelector(".center-card-icon").innerHTML;
+                modalIcon.innerHTML = iconClone;
+
+                // Abre o modal adicionando a classe active
+                modal.classList.add("active");
+            }
+        });
+    });
+
+    // Fechar ao clicar no "X"
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    // Fechar ao clicar fora do card (na zona escura de overlay)
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("remove"); // fallback de garantia
+            modal.classList.remove("active");
+        }
+    });
+
+    // Fechar com a tecla ESC para acessibilidade gamer/tech
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+        }
+    });
 });

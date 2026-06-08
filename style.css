@@ -159,48 +159,45 @@ body {
 
 /* FOTO DE PERFIL ATUALIZADA */
 /* FOTO DE PERFIL COM EFEITO POP-OUT MODERNO */
+/* FOTO DE PERFIL ATUALIZADA - EFEITO IN-CIRCLE ZOOM */
 .photo-container {
-    width: 300px;
-    /* Ajustado para harmonizar melhor com o grid de 360px de altura */
-    height: 300px;
+    width: 250px;
+    height: 250px;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* Alinha a imagem na base para o efeito de "sair" pelo topo */
+    align-items: center; /* Mudado para center para alinhar a foto no meio */
     flex-shrink: 0;
 
     /* Cria o fundo circular estilizado com um gradiente neon */
     background: url("./imagens/tech-bg.jpg") center / cover no-repeat;
 
-    /* Borda arredondada moderna com efeito de vidro (Glassmorphism) e Neon */
+    /* Borda arredondada e formato circular perfeito */
     border-radius: 50%;
-    border: 2px solid rgba(56, 189, 248, 0.3);
+    border: 3px solid rgba(56, 189, 248, 0.3);
 
-    /* Sombra interna e externa para dar profundidade de portal */
+    /* Sombra interna e externa */
     box-shadow:
         0 0 20px rgba(56, 189, 248, 0.15),
         inset 0 0 15px rgba(56, 189, 248, 0.2);
 
-    /* ATENÇÃO: NÃO USAR overflow: hidden aqui, para permitir que a foto saia da borda */
+    /* CORREÇÃO CHAVE: Corta qualquer elemento que tente passar das bordas do círculo */
+    overflow: hidden;
+
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .profile-avatar {
     width: 100%;
-    height: auto;
-    max-height: 115%;
-    /* Faz a imagem ser ligeiramente maior que o container */
-    object-fit: contain;
+    height: 100%; /* Ajustado para preencher o container completamente */
+    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
 
-    /* Transforma a base em um círculo perfeito para cortar apenas a parte de baixo,
-       enquanto o topo da imagem fica livre para passar da borda */
-    clip-path: inset(-100% 0% 0% 0% round 0% 0% 50% 50%);
+    /* REMOVIDO: clip-path antigo que não é mais necessário */
 
-    /* Sombra projetada na própria imagem para criar volume */
+    /* Sombra projetada */
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 
-    transform: scale(1) translateY(0);
+    transform: scale(1); /* Ponto de partida do tamanho */
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
 }
@@ -214,11 +211,12 @@ body {
 }
 
 .card-content:hover .profile-avatar {
-    /* Aumenta o tamanho da imagem e joga ela para cima, simulando a saída da borda */
-    transform: scale(1.12) translateY(-10px);
-    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.7))
-        drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
+    /* CORREÇÃO: Apenas aumenta o tamanho (Zoom), sem mover para cima (translateY removido) */
+    transform: scale(1.15);
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.7));
 }
+
+/* Nota: Remova ou comente a regra genérica '.photo-container img' do fim do seu arquivo original se ela conflitar */
 
 .photo-container img {
     width: 100%;
@@ -235,7 +233,7 @@ body {
 
 .badge-dev {
     font-family: "Orbitron", sans-serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 700;
     letter-spacing: 2px;
     color: #94a3b8;
@@ -251,7 +249,7 @@ body {
 
 .main-name {
     font-family: "Orbitron", sans-serif;
-    font-size: 3.8em;
+    font-size: 3.2em;
     font-weight: 900;
     letter-spacing: 1px;
     line-height: 1;
@@ -260,7 +258,7 @@ body {
 }
 
 .slogan {
-    font-size: 1.1em;
+    font-size: .9em;
     font-weight: 600;
     color: #94a3b8;
     text-shadow: 1px 1px #00000065;
@@ -494,40 +492,46 @@ body {
    ========================================================================== */
 /* --- ESTILO DOS CARDS COMO BOTÕES --- */
 
-.footer-cards-grid {
+.center-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Define colunas responsivas limitando o tamanho máximo para melhor centralização */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center; /* Centraliza os cards horizontalmente na tela */
     gap: 20px;
+    width: 100%;
+    padding: 20px 0;
 }
 
-.footer-card {
+.center-card {
     display: flex;
     align-items: center;
-    justify-items: center;
     gap: 15px;
-    padding: 15px;
+    padding: 20px 15px;
     border-radius: 12px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(11, 17, 30, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.15);
     text-decoration: none;
-    /* Remove sublinhado de link */
     color: inherit;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Cores dos Ícones Hi-Tech */
+.blue-text { color: #38bdf8; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5)); }
+.purple-text { color: #a855f7; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5)); }
+
 /* Feedback visual ao passar o mouse */
-.footer-card:hover {
-    background: rgba(56, 189, 248, 0.05);
-    border-color: rgba(56, 189, 248, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.center-card:hover {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
 }
 
 /* Efeito de clique físico pressionado */
-.footer-card:active {
+.center-card:active {
     transform: translateY(-1px);
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(56, 189, 248, 0.15);
 }
 
 /* --- ESTILO DA CAIXA CENTRAL (MODAL) --- */
@@ -537,33 +541,27 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(5, 8, 15, 0.7);
-    /* Fundo escuro atrás do vidro */
-    backdrop-filter: blur(8px);
-    /* Desfoca o site ao fundo */
+    background: rgba(5, 8, 15, 0.85); /* Escurecido para dar destaque */
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
-    /* Garante que fica na frente de tudo */
     opacity: 0;
     pointer-events: none;
-    /* Invisível e não clicável por padrão */
     transition: opacity 0.4s ease;
 }
 
-/* Quando o modal ganha a classe .active, ele aparece */
 .modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* A caixa de Vidro Esfumaçado */
 .modal-content {
-    background: rgba(11, 17, 30, 0.75) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(56, 189, 248, 0.25);
+    background: rgba(11, 17, 30, 0.8) !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 20px;
     padding: 40px;
     width: 90%;
@@ -571,20 +569,16 @@ body {
     text-align: center;
     position: relative;
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.6),
-        0 0 30px rgba(56, 189, 248, 0.1);
-
-    /* Efeito de escala ao abrir */
+        0 20px 50px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(56, 189, 248, 0.15);
     transform: scale(0.8);
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .modal-overlay.active .modal-content {
     transform: scale(1);
-    /* Ganha tamanho normal suavemente */
 }
 
-/* Botão Fechar (X) */
 .modal-close {
     position: absolute;
     top: 15px;
@@ -594,18 +588,18 @@ body {
     color: #64748b;
     font-size: 2rem;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
 }
 
 .modal-close:hover {
     color: #f43f5e;
-    /* Fica vermelho no hover */
+    transform: scale(1.1);
 }
 
-/* Elementos de texto internos do modal */
 .modal-icon {
     font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .modal-content h2 {
@@ -613,12 +607,13 @@ body {
     color: #ffffff;
     margin-bottom: 15px;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .modal-content p {
     color: #94a3b8;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* ==========================================================================
